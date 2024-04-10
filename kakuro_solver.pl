@@ -53,7 +53,9 @@ problem(Id, N, Blanks) :-
         [2,0], [2,1]
     ].
 
-% has_width(W, [X]) is True if matrix X has width W
+go(P) :- problem(P, N, B), blanks(X, N, B), lines(X, H), print_this(X). 
+
+% has_width(W, [X]) is True if matrix X has width W 
 has_width(W, [L]) :-
     length(L, W). 
 
@@ -86,6 +88,15 @@ blanks(X, N, [H|T]) :-
     initialize_matrix(X, G, F, 0),
     blanks(X, N, T). 
 
+% line_s(X) is True when a solution is found using Kakuro Rules !!! TO FINISH
+line_s(_).
+line_s(X) :-
+    length(Pos, J),
+    length(Line, J),
+    kakuro(Line, Sum),
+    find_line(Pos, X, Line),
+    line_s(X). 
+
 % find_line(P, X, L) is True when L (Line) has the numbers specific to a P (Position)
 find_line([[G,F]|T1], X, [H|T2]) :-
     initialize_matrix(X, G, F, H), 
@@ -107,7 +118,7 @@ is_digit(X) :- member(X, [0,1,2,3,4,5,6,7,8,9]).
 
 % -----------------------------------------------------------
 % KAKURO GAME
-kakuro(List, Sum) :- all_digits(List), all_different(List), sum_list(List, Sum). 
+kakuro(Board, Solution) :- all_digits(Board), all_different(Board), sum_list(Board, Solution). 
 
 % all_different is True if all digits are unique (not the same)
 all_different([]). 
