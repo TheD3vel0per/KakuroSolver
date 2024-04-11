@@ -1,14 +1,14 @@
 board(5, [
    tile_closed,        tile_head(12, 0),   tile_closed,        tile_closed,       tile_closed,
-   tile_head(0, 8),    tile_open(A),       tile_open(B),       tile_open(C_),      tile_closed,  
+   tile_head(0, 8),    tile_open(A),       tile_open(B),       tile_open(C),      tile_closed,  
    tile_closed,        tile_open(D),       tile_closed,        tile_closed,       tile_closed, 
    tile_closed,        tile_open(E),       tile_closed,        tile_closed,       tile_closed,
    tile_closed,        tile_closed,        tile_closed,        tile_closed,       tile_closed 
-])
+]).
 
 board(4, [
     tile_closed,        tile_head(15, 0),   tile_head(6, 0),    tile_closed, 
     tile_head(0, 9),    tile_open(A),       tile_open(B),       tile_closed, 
     tile_closed,        tile_open(C),       tile_open(D),       tile_closed, 
     tile_closed,        tile_closed,        tile_closed,        tile_closed
-])
+]).

@@ -7,7 +7,7 @@
 main :-
     write("Enter a kakuro board.\n"),
     read(Board),
-    kakuro_solution(Board).
+    write(kakuro_solution(Board)).
 
 %%%%%%%%%%%%%%%%%%
 %%%%          %%%%
