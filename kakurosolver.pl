@@ -1,3 +1,20 @@
+%%%%%%%%%%%%%%%%%%
+%%%%          %%%%
+%%%%   Main   %%%%
+%%%%          %%%%
+%%%%%%%%%%%%%%%%%%
+
+main :-
+    write("Enter a kakuro board.\n"),
+    read(Board),
+    kakuro_solution(Board).
+
+%%%%%%%%%%%%%%%%%%
+%%%%          %%%%
+%%%%   Data   %%%%
+%%%%          %%%%
+%%%%%%%%%%%%%%%%%%
+
 % Board = Dictionary of Tiles
 
 % Tile is one of:
@@ -9,8 +26,8 @@
 % Board 1
 % board(4, [
 %     tile_closed,        tile_head(15, 0),   tile_head(6, 0),    tile_closed, 
-%     tile_head(0, 9),    tile_open(_),       tile_open(_),       tile_closed, 
-%     tile_closed,        tile_open(_),       tile_open(_),       tile_closed, 
+%     tile_head(0, 9),    tile_open(A),       tile_open(B),       tile_closed, 
+%     tile_closed,        tile_open(C),       tile_open(D),       tile_closed, 
 %     tile_closed,        tile_closed,        tile_closed,        tile_closed
 % ])
 
